@@ -1,0 +1,190 @@
+/* Estilo minimalista moderno con paleta de verdes */
+:root {
+    --verde-oscuro: #2E7D32;
+    --verde-medio: #4CAF50;
+    --verde-claro: #8BC34A;
+    --verde-pastel: #C8E6C9;
+    --fondo-claro: #F1F8E9;
+    --texto-oscuro: #263238;
+    --texto-claro: #FFFFFF;
+    --borde: #A5D6A7;
+    --sombra: rgba(76, 175, 80, 0.2);
+  }
+  
+  /* Reset y base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+  }
+  
+  body {
+    background-color: var(--fondo-claro);
+    color: var(--texto-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Contenedor principal */
+  div {
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  /* Animación de entrada */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Formulario estilizado */
+  form {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--sombra);
+    transition: transform 0.3s ease;
+  }
+  
+  form:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Tabla como contenedor */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+  }
+  
+  /* Cabecera */
+  tr:first-child td {
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio));
+    color: var(--texto-claro);
+    padding: 18px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Filas del formulario */
+  tr:not(:first-child) {
+    border-bottom: 1px solid var(--borde);
+  }
+  
+  td {
+    padding: 16px 20px;
+  }
+  
+  /* Campos de entrada */
+  input[type="text"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--verde-pastel);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: var(--verde-medio);
+    box-shadow: 0 0 0 3px rgba(139, 195, 74, 0.3);
+    background-color: white;
+  }
+  
+  /* Botón de actualizar */
+  input[type="submit"] {
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-claro));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  input[type="submit"]:hover {
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--sombra);
+  }
+  
+  /* Botón cancelar */
+  td a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: white;
+    color: var(--verde-oscuro);
+    border: 1px solid var(--verde-medio);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+  }
+  
+  td a:hover {
+    background-color: var(--verde-pastel);
+    color: var(--verde-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px var(--sombra);
+  }
+  
+  /* Campo oculto */
+  input[type="text"][style*="visibility:hidden"] {
+    display: none;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 600px) {
+    body {
+      padding: 10px;
+    }
+    
+    td {
+      display: block;
+      width: 100% !important;
+      padding: 12px 15px;
+    }
+    
+    tr:first-child td {
+      font-size: 1.1rem;
+      padding: 15px;
+    }
+    
+    input[type="text"], 
+    input[type="submit"],
+    td a {
+      padding: 10px 15px;
+    }
+    
+    tr:last-child td {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    tr:last-child td a {
+      order: 1;
+    }
+    
+    tr:last-child td[colspan="2"] {
+      order: 2;
+    }
+  }

@@ -1,0 +1,190 @@
+/* Variables de color */
+:root {
+    --verde-oscuro: #2E7D32;
+    --verde-principal: #4CAF50;
+    --verde-claro: #81C784;
+    --verde-pastel: #C8E6C9;
+    --rojo-cancelar: #F44336;
+    --fondo: #F1F8E9;
+    --texto-oscuro: #263238;
+    --texto-claro: #FFFFFF;
+    --sombra-verde: rgba(76, 175, 80, 0.2);
+    --borde: #A5D6A7;
+  }
+  
+  /* Estilos base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+  }
+  
+  body {
+    background-color: var(--fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Contenedor principal */
+  div {
+    width: 100%;
+    max-width: 600px;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Formulario con tabla */
+  form {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px var(--sombra-verde);
+    transition: transform 0.3s ease;
+  }
+  
+  form:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Estilos de tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent;
+  }
+  
+  /* Encabezado */
+  .table-header {
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-principal));
+    color: var(--texto-claro);
+    padding: 20px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Filas y celdas */
+  tr:not(:first-child) {
+    border-bottom: 1px solid var(--borde);
+  }
+  
+  td {
+    padding: 18px 25px;
+  }
+  
+  /* Campos de texto */
+  input[type="text"] {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--verde-pastel);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #FAFAFA;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 3px rgba(129, 199, 132, 0.3);
+    background-color: white;
+  }
+  
+  /* Botones */
+  .action-buttons {
+    position: relative;
+    padding-top: 8px; /* Espacio para el botón cancelar */
+  }
+  
+  .btn-save {
+    width: 78%;
+    padding: 15px;
+    background: linear-gradient(130deg, var(--verde-principal), var(--verde-claro));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .btn-save:hover {
+    background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-principal));
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  }
+  
+  .btn-cancel {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    padding: 10px 20px;
+    background: rgb(241, 241, 241);
+    color: var(--verde-principal);
+    border: 2px solid var(--verde-oscuro);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #b6f3c3;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(244, 67, 54, 0.2);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    body {
+      padding: 15px;
+    }
+    
+    td {
+      padding: 15px 20px;
+      display: block;
+      width: 100%;
+    }
+    
+    .table-header {
+      font-size: 1.2rem;
+      padding: 15px;
+    }
+    
+    input[type="text"] {
+      padding: 12px 15px;
+    }
+    
+    .action-buttons {
+      padding-top: 60px;
+    }
+    
+    .btn-cancel {
+      right: 20px;
+      padding: 8px 15px;
+    }
+    
+    tr td:first-child {
+      padding-bottom: 5px;
+      font-weight: 500;
+      color: var(--verde-oscuro);
+    }
+    
+    tr td:last-child {
+      padding-top: 5px;
+    }
+  }
