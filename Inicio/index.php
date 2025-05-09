@@ -24,11 +24,6 @@
                     <p>Las capacidades de negocio representan lo que una organización es capaz de hacer para cumplir con sus objetivos estratégicos y operativos. Son elementos fundamentales que describen las competencias y funciones esenciales del negocio, independientemente de cómo se implementen o quién las realice</p>
                     <a href="/Capacidades/IndexC.php" class="button">Capacidad</a>
                 </div>
-                <div class="card">
-                    <h2>Tipos de negocios</h2>
-                    <p>Gestiona tu inventario con precisión y claridad. Analiza flujos de suministro y optimiza tus decisiones con herramientas visuales avanzadas.</p>
-                    <a href="/abastecimientoClaro/" class="button">Negocios</a>
-                </div>
             </div>
         </main>
     </div>
