@@ -1,0 +1,141 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5fef5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Contenedor principal */
+div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Botones */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Botón principal (Volver, Nueva Capacidad) */
+.button {
+    background-color: #a8e6cf;
+    color: #2a5a44;
+    border: 2px solid #8fd3b0;
+}
+
+.button:hover {
+    background-color: #8fd3b0;
+    color: #1e4533;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Cabecera de la tabla */
+th {
+    background-color: #b5ead7;
+    color: #2a5a44;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #d4eddf;
+    background-color: #f0fff8;
+}
+
+/* Filas alternas */
+tr:nth-child(even) td {
+    background-color: #e6f7ef;
+}
+
+/* Hover en filas */
+tr:hover td {
+    background-color: #d4f3e3;
+}
+
+/* Celda de acciones */
+.acciones {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* Botones dentro de la tabla */
+.acciones .button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    border-radius: 15px;
+}
+
+/* Botón Editar */
+.acciones a:nth-child(1) {
+    background-color: #c7f0db;
+    color: #2a5a44;
+    border: 1px solid #a8e6cf;
+}
+
+/* Botón Eliminar */
+.acciones a:nth-child(2) {
+    background-color: #ffd3b6;
+    color: #8b4513;
+    border: 1px solid #ffaaa5;
+}
+
+/* Botón Ver Nivel 3 */
+.acciones a:nth-child(3) {
+    background-color: #dcedc1;
+    color: #556b2f;
+    border: 1px solid #c8e6a9;
+}
+
+/* Mensaje cuando no hay datos */
+td[colspan="5"] {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    background-color: #f0fff8 !important;
+}
+
+/* Efectos hover para botones de acciones */
+.acciones .button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .acciones {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

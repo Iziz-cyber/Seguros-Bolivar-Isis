@@ -1,0 +1,164 @@
+/* nuevoC.css - Estilo Elegante con Verdes Pastel */
+:root {
+    --verde-menta: #d8f3dc;
+    --verde-pastel: #b7e4c7;
+    --verde-oscuro: #52b788;
+    --verde-acento: #40916c;
+    --texto-oscuro: #1b4332;
+    --fondo: #f8f9fa;
+    --blanco: #ffffff;
+  }
+  
+  /* Estructura Principal */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--fondo);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  /* Barra Lateral - Estilo Moderno */
+  .sidebar {
+    width: 220px;
+    background-color: var(--verde-oscuro);
+    padding: 30px 0;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 12px 25px;
+    color: var(--verde-menta);
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 30px;
+  }
+  
+  .sidebar a::before {
+    content: "→";
+    position: absolute;
+    left: 10px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  .sidebar a:hover::before {
+    opacity: 1;
+    left: 15px;
+  }
+  
+  /* Contenido Principal */
+  .content {
+    flex: 1;
+    padding: 40px;
+    background-color: var(--blanco);
+  }
+  
+  h1 {
+    color: var(--verde-oscuro);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--verde-acento), transparent);
+  }
+  
+  .description {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+    max-width: 700px;
+  }
+  
+  /* Tarjetas - Estilo Minimalista Elegante */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    background-color: var(--verde-menta);
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--verde-acento);
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h2 {
+    color: var(--verde-acento);
+    margin-top: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+  
+  .card p {
+    color: var(--texto-oscuro);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+  
+  /* Botones - Estilo Sofisticado */
+  .button {
+    display: inline-block;
+    background-color: var(--verde-acento);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+  }
+  
+  .button:hover {
+    background-color: transparent;
+    color: var(--verde-acento);
+    border-color: var(--verde-acento);
+  }
+  
+  /* Efectos Especiales */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+    .sidebar {
+      width: 100%;
+      padding: 15px 0;
+    }
+    .sidebar a {
+      padding: 10px 20px;
+    }
+  }

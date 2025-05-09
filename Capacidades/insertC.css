@@ -1,0 +1,109 @@
+/* nuevoCC.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f7f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+div {
+    width: 100%;
+    max-width: 600px;
+    background-color: #e0f0ea;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.table-header {
+    background-color: #b8d8c0;
+    color: #2d4a3a;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    border: none;
+}
+
+td {
+    padding: 12px 15px;
+    border: 1px solid #d1e7dd;
+}
+
+tr:nth-child(even) {
+    background-color: #f8fcf8;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c4dfd6;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+    background-color: #f9fdfb;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #8cc8a8;
+    box-shadow: 0 0 0 2px rgba(140, 200, 168, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.action-buttons {
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.btn-save, .btn-cancel {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.btn-save {
+    background-color: #a7d7c5;
+    color: #2a4a3a;
+}
+
+.btn-save:hover {
+    background-color: #8cc8a8;
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    background-color: #d1e7dd;
+    color: #3a5a4a;
+    padding: 10px 20px;
+}
+
+.btn-cancel:hover {
+    background-color: #b8d8c0;
+    transform: translateY(-2px);
+}

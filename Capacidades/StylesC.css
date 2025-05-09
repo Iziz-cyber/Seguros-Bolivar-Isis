@@ -1,0 +1,261 @@
+/* Reset y tipografía mejorada */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5fbf6;
+    color: #141414;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Contenedor de botones - Estilo mejorado */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    margin-bottom: 25px;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Botones principales */
+.button {
+    text-decoration: none;
+    color: #1a3e1e;
+    background: linear-gradient(135deg, #81c784, #66bb6a);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(102, 187, 106, 0.2);
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #66bb6a, #388e3c);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 187, 106, 0.3);
+    color: white;
+}
+
+/* Botón de ordenamiento */
+.order-btn {
+    background: linear-gradient(135deg, #a5d6a7, #81c784);
+    color: #1a3e1e;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(102, 187, 106, 0.2);
+    border: none;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background: linear-gradient(135deg, #81c784, #66bb6a);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(102, 187, 106, 0.3);
+}
+
+/* Contenedor de tabla */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 5px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo de tabla mejorado */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(104, 178, 127, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Encabezado de tabla */
+table thead tr {
+    background: linear-gradient(90deg, #66bb6a, #4caf50);
+    color: white;
+    text-align: left;
+}
+
+table th {
+    padding: 15px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+/* Celdas de tabla */
+table td {
+    padding: 14px 20px;
+    border-bottom: 1px solid #e8f5e9;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+/* Filas alternas */
+table tr:nth-child(even) {
+    background-color: #f8fdf9;
+}
+
+/* Efecto hover */
+table tr:hover {
+    background-color: #edf7ee;
+}
+
+/* Estilos para botones de acción */
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.actions form {
+    margin: 0;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #2e7d32;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 5px 0;
+    font: inherit;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-link:hover {
+    color: #1b5e20;
+    text-decoration: none;
+}
+
+/* Enlace de borrar */
+.actions a {
+    color: #c62828;
+    text-decoration: underline;
+    padding: 5px 0;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.actions a:hover {
+    color: #b71c1c;
+    text-decoration: none;
+}
+
+/* Mensaje cuando no hay datos */
+.no-data {
+    text-align: center;
+    padding: 30px;
+    font-style: italic;
+    color: #718096;
+    background-color: #f8fdf9;
+    font-size: 0.95rem;
+}
+
+.no-data::before {
+    content: "ⓘ";
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #a5d6a7;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .action-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .order-btn {
+        margin-left: 0;
+    }
+    
+    table {
+        display: block;
+    }
+    
+    table thead {
+        display: none;
+    }
+    
+    table tr {
+        display: block;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 15px;
+        border-bottom: 1px solid #e8f5e9;
+    }
+    
+    table td::before {
+        content: attr(data-label);
+        font-weight: 600;
+        color: #4a5568;
+        margin-right: 15px;
+        flex: 1;
+    }
+    
+    .actions {
+        flex-direction: column;
+    }
+    
+    .actions form, .actions a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Efectos para mensajes de estado */
+.success-message {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
