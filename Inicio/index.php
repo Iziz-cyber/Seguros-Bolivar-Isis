@@ -10,8 +10,6 @@
         <nav class="sidebar">
             <a href="/inicio/">Inicio</a>
             <a href="/Conceptos/Index2.php">Conceptos</a>
-            <a href="/unirArchivos/">Procesos</a>
-            <a href="/unirArchivos/">Aplicaciones</a>
             <a href="/Capacidades/nuevoC.php">Capacidades</a>
         </nav>
         <main class="content">
